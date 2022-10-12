@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 // ignore: must_be_immutable
 class EditNote extends StatefulWidget {
@@ -23,12 +24,15 @@ class _EditNoteState extends State<EditNote> {
     super.initState();
   }
 
+  // final style = TextStyle(fontWeight: FontWeight.bold);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.pink,
         actions: [
-          TextButton(
+          IconButton(
             onPressed: () {
               widget.docToEdit.reference.update({
                 'title': title.text,
@@ -37,22 +41,15 @@ class _EditNoteState extends State<EditNote> {
                 () => Navigator.pop(context),
               );
             },
-            child: Text(
-              'save',
-              style: TextStyle(color: Colors.black),
-            ),
+            icon: Icon(Icons.save),
           ),
-          TextButton(
-            onPressed: () {
-              widget.docToEdit.reference.delete().whenComplete(
-                    () => Navigator.pop(context),
-                  );
-            },
-            child: Text(
-              'Delete',
-              style: TextStyle(color: Colors.black),
-            ),
-          )
+          IconButton(
+              onPressed: () {
+                widget.docToEdit.reference.delete().whenComplete(
+                      () => Navigator.pop(context),
+                    );
+              },
+              icon: Icon(Icons.delete_forever)),
         ],
       ),
       body: Container(
@@ -60,23 +57,41 @@ class _EditNoteState extends State<EditNote> {
         child: Column(
           children: [
             Container(
-              decoration: BoxDecoration(border: Border.all()),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(4.0),
+                ),
+              ),
               child: TextField(
+                style: GoogleFonts.secularOne(
+                  textStyle: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 controller: title,
-                decoration: InputDecoration(hintText: 'Title'),
+                decoration: InputDecoration(labelText: 'Title'),
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 30,
             ),
             Expanded(
               child: Container(
-                decoration: BoxDecoration(border: Border.all()),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4.0),
+                  ),
+                ),
                 child: TextField(
+                  style: GoogleFonts.caveat(
+                    textStyle: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                   controller: content,
                   maxLines: null,
-                  expands: true,
-                  decoration: InputDecoration(hintText: 'content'),
+                  // expands: true,
+                  decoration: InputDecoration(labelText: 'content'),
                 ),
               ),
             )
