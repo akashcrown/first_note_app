@@ -25,7 +25,7 @@ class AddNote extends StatelessWidget {
               },
               icon: Icon(Icons.save)),
         ],
-        backgroundColor: Color.fromARGB(255, 225, 57, 124),
+        backgroundColor: Color.fromARGB(255, 180, 30, 90),
       ),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),

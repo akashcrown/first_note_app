@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,6 +25,14 @@ class _HomepageState extends State<Homepage> {
       appBar: AppBar(
         title: Text('Crown Note App'),
         backgroundColor: Color.fromARGB(255, 100, 105, 231),
+        actions: [
+          IconButton(
+            onPressed: () {
+              FirebaseAuth.instance.signOut();
+            },
+            icon: Icon(Icons.logout),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.note_add),
@@ -50,8 +59,7 @@ class _HomepageState extends State<Homepage> {
                   },
                   child: Container(
                     margin: EdgeInsets.all(10),
-                    height: 150,
-                    // color: Color.fromARGB(255, 218, 111, 111),
+                    // height: 150,
                     color: Colors
                         .primaries[Random().nextInt(Colors.primaries.length)],
                     child: Column(

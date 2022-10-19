@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'home_page.dart';
+import 'package:get/get.dart';
+import 'auth.dart';
+// import 'home_page.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,9 +15,26 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Homepage(),
+      // home: testing(),
+      home: PhoneLoginScreen(),
+    );
+  }
+}
+
+class testing extends StatefulWidget {
+  const testing({super.key});
+
+  @override
+  State<testing> createState() => _testingState();
+}
+
+class _testingState extends State<testing> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Text('hello'),
     );
   }
 }
