@@ -315,10 +315,10 @@ library {
   maven_library {
     groupId: "com.google.android.gms"
     artifactId: "play-services-auth-api-phone"
-    version: "17.4.0"
+    version: "18.0.1"
   }
   digests {
-    sha256: "\234\r\344\365\274\323\032\377@\210\372\305\016~\026\270\275\301\322\0054\\\212\367z\020\311\326\321?\361\314"
+    sha256: "\225d\025NE\346%\322\346$\a@\372\212 R\205\260\326\235\3728q\322\271\b\266\3125\272X\'"
   }
   repo_index {
   }
@@ -925,6 +925,30 @@ library {
 }
 library {
   maven_library {
+    groupId: "com.google.android.gms"
+    artifactId: "play-services-auth"
+    version: "20.1.0"
+  }
+  digests {
+    sha256: "\375ng\225\221\257\v\222\222\354\310K\234\250[\271a\t\004\004x\331\264be5\245\r\032\237\367N"
+  }
+  repo_index {
+  }
+}
+library {
+  maven_library {
+    groupId: "com.google.android.gms"
+    artifactId: "play-services-auth-base"
+    version: "18.0.1"
+  }
+  digests {
+    sha256: "ma\330]p\262\004\331\036JW\341\233\345e\306\366\374\231\003\024w\226\254\353Zt\302\261R\355\366"
+  }
+  repo_index {
+  }
+}
+library {
+  maven_library {
     groupId: "io.flutter"
     artifactId: "armeabi_v7a_release"
     version: "1.0.0-c08d7d5efc9aa6eb3c30cfb3be6dc09bca5e7631"
@@ -964,7 +988,7 @@ library {
 }
 library {
   digests {
-    sha256: "foX\362>&\271\341\326y\246\bb\341\003\341\231\304(=\355\355\366\001\3759b\343\247.Tn"
+    sha256: "K\210*>\224\306\341X\nQBi\306\v\021\"vS\332D?\030\232\364\262B\222z\215\031\026\315"
   }
 }
 library_dependencies {
@@ -1343,22 +1367,41 @@ library_dependencies {
   library_dep_index: 4
   library_dep_index: 9
 }
+library_dependencies {
+  library_index: 75
+  library_dep_index: 15
+  library_dep_index: 18
+  library_dep_index: 26
+  library_dep_index: 76
+  library_dep_index: 27
+  library_dep_index: 28
+  library_dep_index: 29
+}
+library_dependencies {
+  library_index: 76
+  library_dep_index: 4
+  library_dep_index: 27
+  library_dep_index: 28
+  library_dep_index: 29
+}
 module_dependencies {
   module_name: "base"
-  dependency_index: 46
   dependency_index: 0
+  dependency_index: 46
   dependency_index: 1
-  dependency_index: 75
-  dependency_index: 76
   dependency_index: 77
+  dependency_index: 78
+  dependency_index: 79
   dependency_index: 33
   dependency_index: 5
   dependency_index: 70
   dependency_index: 2
   dependency_index: 58
+  dependency_index: 75
+  dependency_index: 26
   dependency_index: 47
   dependency_index: 49
-  dependency_index: 78
+  dependency_index: 80
 }
 repositories {
   maven_repo {
@@ -1373,6 +1416,16 @@ repositories {
 repositories {
   maven_repo {
     url: "https://storage.googleapis.com/download.flutter.io"
+  }
+}
+repositories {
+  maven_repo {
+    url: "https://dl.google.com/dl/android/maven2/"
+  }
+}
+repositories {
+  maven_repo {
+    url: "https://repo.maven.apache.org/maven2/"
   }
 }
 repositories {

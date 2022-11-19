@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
-import 'auth.dart';
+import 'signin2.dart';
 // import 'home_page.dart';
 
 Future main() async {
@@ -18,23 +18,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       // home: testing(),
-      home: PhoneLoginScreen(),
-    );
-  }
-}
-
-class testing extends StatefulWidget {
-  const testing({super.key});
-
-  @override
-  State<testing> createState() => _testingState();
-}
-
-class _testingState extends State<testing> {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Text('hello'),
+      home: Phonelogin2(),
     );
   }
 }

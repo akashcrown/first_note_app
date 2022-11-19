@@ -69,6 +69,19 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="D:\myApp\note_app\android@@:smart_auth::release"
+      jars="D:\myApp\note_app\build\smart_auth\.transforms\3572a3830e0902df6973e066226810fd\transformed\out\jars\classes.jar"
+      resolved="fman.ge.smart_auth:smart_auth:unspecified"
+      folder="D:\myApp\note_app\build\smart_auth\.transforms\3572a3830e0902df6973e066226810fd\transformed\out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="com.google.firebase:firebase-auth-ktx:21.1.0@aar"
       jars="C:\Users\Akash kumar\.gradle\caches\transforms-3\829682bcc56eb16f385528ef5383b56f\transformed\jetified-firebase-auth-ktx-21.1.0\jars\classes.jar"
       resolved="com.google.firebase:firebase-auth-ktx:21.1.0"
@@ -209,10 +222,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="com.google.android.gms:play-services-auth-api-phone:17.4.0@aar"
-      jars="C:\Users\Akash kumar\.gradle\caches\transforms-3\08805e656a3219301851cd042d382e7e\transformed\jetified-play-services-auth-api-phone-17.4.0\jars\classes.jar"
-      resolved="com.google.android.gms:play-services-auth-api-phone:17.4.0"
-      folder="C:\Users\Akash kumar\.gradle\caches\transforms-3\08805e656a3219301851cd042d382e7e\transformed\jetified-play-services-auth-api-phone-17.4.0"
+      name="com.google.android.gms:play-services-auth-api-phone:18.0.1@aar"
+      jars="C:\Users\Akash kumar\.gradle\caches\transforms-3\661f963381eb53c6cea0a92b5aed8fdd\transformed\jetified-play-services-auth-api-phone-18.0.1\jars\classes.jar"
+      resolved="com.google.android.gms:play-services-auth-api-phone:18.0.1"
+      folder="C:\Users\Akash kumar\.gradle\caches\transforms-3\661f963381eb53c6cea0a92b5aed8fdd\transformed\jetified-play-services-auth-api-phone-18.0.1"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -569,6 +582,32 @@
       jars="C:\Users\Akash kumar\.gradle\caches\transforms-3\9f3a6c99108e58509d099405466dc822\transformed\jetified-firebase-appcheck-interop-16.1.0\jars\classes.jar"
       resolved="com.google.firebase:firebase-appcheck-interop:16.1.0"
       folder="C:\Users\Akash kumar\.gradle\caches\transforms-3\9f3a6c99108e58509d099405466dc822\transformed\jetified-firebase-appcheck-interop-16.1.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="com.google.android.gms:play-services-auth:20.1.0@aar"
+      jars="C:\Users\Akash kumar\.gradle\caches\transforms-3\8e3010740483d75c161f46936cb6df5f\transformed\jetified-play-services-auth-20.1.0\jars\classes.jar"
+      resolved="com.google.android.gms:play-services-auth:20.1.0"
+      folder="C:\Users\Akash kumar\.gradle\caches\transforms-3\8e3010740483d75c161f46936cb6df5f\transformed\jetified-play-services-auth-20.1.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="com.google.android.gms:play-services-auth-base:18.0.1@aar"
+      jars="C:\Users\Akash kumar\.gradle\caches\transforms-3\acbed7d481c2b99e9b41b58875afe33a\transformed\jetified-play-services-auth-base-18.0.1\jars\classes.jar"
+      resolved="com.google.android.gms:play-services-auth-base:18.0.1"
+      folder="C:\Users\Akash kumar\.gradle\caches\transforms-3\acbed7d481c2b99e9b41b58875afe33a\transformed\jetified-play-services-auth-base-18.0.1"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"

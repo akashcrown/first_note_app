@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 // import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:note_app/contacts.dart';
 
 // ignore: must_be_immutable
 class AddNote extends StatelessWidget {
@@ -21,6 +22,7 @@ class AddNote extends StatelessWidget {
                 ref.add({
                   'title': title.text,
                   'content': content.text,
+                  'userId': currentUser.id,
                 }).whenComplete(() => Navigator.pop(context));
               },
               icon: Icon(Icons.save)),

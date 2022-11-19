@@ -1,11 +1,15 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'todo.dart';
 
 // ignore: must_be_immutable
 class EditNote extends StatefulWidget {
-  DocumentSnapshot docToEdit;
-  EditNote({required this.docToEdit});
+  Todo todo;
+
+  EditNote({required this.todo});
 
   @override
   State<EditNote> createState() => _EditNoteState();
@@ -17,10 +21,8 @@ class _EditNoteState extends State<EditNote> {
 
   @override
   void initState() {
-    title =
-        TextEditingController(text: (widget.docToEdit.data() as Map)['title']);
-    content = TextEditingController(
-        text: (widget.docToEdit.data() as Map)['content']);
+    title = TextEditingController(text: widget.todo.title);
+    content = TextEditingController(text: widget.todo.content);
     super.initState();
   }
 
@@ -33,19 +35,25 @@ class _EditNoteState extends State<EditNote> {
         backgroundColor: Colors.pink,
         actions: [
           IconButton(
-            onPressed: () {
-              widget.docToEdit.reference.update({
+            onPressed: () async {
+              await FirebaseFirestore.instance
+                  .collection('notes')
+                  .doc(widget.todo.id)
+                  .update({
                 'title': title.text,
                 'content': content.text,
-              }).whenComplete(
-                () => Navigator.pop(context),
-              );
+              });
+              Get.back();
             },
             icon: Icon(Icons.save),
           ),
           IconButton(
               onPressed: () {
-                widget.docToEdit.reference.delete().whenComplete(
+                FirebaseFirestore.instance
+                    .collection('notes')
+                    .doc(widget.todo.id)
+                    .delete()
+                    .whenComplete(
                       () => Navigator.pop(context),
                     );
               },
